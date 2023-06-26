@@ -1,6 +1,7 @@
+const { BadRequestError } = require('../utils/errors');
 class GiftExchange {
     static pairs(names) {
-        if (names.length % 2 === 1) throw new Error("Must provide an even number of users for pairs matching.")
+        if (names.length % 2 === 1) throw new BadRequestError("Must provide an even number of users for pairs matching.")
     
         const namedPairs = []
     
